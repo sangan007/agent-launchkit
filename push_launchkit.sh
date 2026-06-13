@@ -88,10 +88,11 @@ echo "=== 3. PRODUCTION SYNC ==="
 git branch -M main
 
 # Add remote origin
-git remote add origin https://github.com/sangeerthbalan/Agent-Launchkit.git
+git remote add origin https://github.com/sangan007/agent-launchkit.git
 
 # Force push sequence to the remote branch
 echo "Pushing commits to remote repository..."
 git push -f -u origin main
 echo "Git pipeline push complete!"
+
 
