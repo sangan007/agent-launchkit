@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0D0E12;
+  --bg-secondary: #16171D;
+  --bg-tertiary: #1E2028;
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --accent-blue: #3B82F6;
+  --accent-indigo: #818CF8;
+  --border-color: rgba(255, 255, 255, 0.05);
+}
+
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-indigo: var(--accent-indigo);
+  --color-border-color: var(--border-color);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar matching premium midnight mode */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Prevent absolute and decorative elements from breaking layout boundaries */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Force decorative background shapes to stay bound and scaled correctly */
+.bg-decorative-shape, [class*="vector-"], [class*="bg-blob"] {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
